@@ -58,7 +58,32 @@
   };
 
   /* ---------- Telugu translation ---------- */
-  var DICT = {"DEEVENA FOUNDATION VADDEPALLY": "దీవెన ఫౌండేషన్ వడ్డేపల్లి", "DEEVENA FOUNDATION": "దీవెన ఫౌండేషన్", "VADDEPALLY": "వడ్డేపల్లి", "Compassion • Service • Community": "దయ • సేవ • సంఘం", "SERVICE • SUPPORT • COMMUNITY": "సేవ • మద్దతు • సంఘం", "People helping people": "ప్రజలు ప్రజలకు సహాయం చేస్తున్నారు", "What our photographs show": "మా ఫోటోలు చూప些什么", "Support Our Mission": "మా మిషన్ని మద్దతు ఇవ్వండి", "Explore Our Programs": "మా కార్యక్రమాలను పరిశీలించండి", "Home": "హోమ్", "About": "విషయాలు", "Programs": "కార్యక్రమాలు", "Gallery": "గ్యాలరీ", "Stories": "కథలు", "Contact": "సంప్రదింపులు", "Donate": "దానం చేయండి", "Copied": "కాపీ అయింది", "Copy": "కాపీ", "Donate Now": "ఇప్పుడే దానం చేయండి", "Join Us": "మాతో చేరండి", "Volunteer": "స్వచ్ఛంద సేవకుడు", "Get in touch": "స్ప్రందించండి", "Read more": "మరింత చదవండి", "View all": "అన్నింటినీ చూడండి"};
+  var DICT = {
+    'DEEVENA FOUNDATION VADDEPALLY': 'దీవెన ఫౌండేషన్ వడ్డేపల్లి',
+    'DEEVENA FOUNDATION': 'దీవెన ఫౌండేషన్',
+    'VADDEPALLY': 'వడ్డేపల్లి',
+    'Compassion • Service • Community': 'దయ • సేవ • సంఘం',
+    'SERVICE • SUPPORT • COMMUNITY': 'సేవ • మద్దతు • సంఘం',
+    'People helping people': 'ప్రజలు ప్రజలకు సహాయం చేస్తున్నారు',
+    'What our photographs show': 'మా ఫోటాలు చూప些什么',
+    'Support Our Mission': 'మా మిషన్ని మద్దతు ఇవ్వండి',
+    'Explore Our Programs': 'మా కార్యక్రమాలను పరిశీలించండి',
+    'Home': 'హోమ్',
+    'About': 'విషయాలు',
+    'Programs': 'కార్యక్రమాలు',
+    'Gallery': 'గ్యాలరీ',
+    'Stories': 'కథలు',
+    'Contact': 'సంప్రదింపులు',
+    'Donate': 'దానం చేయండి',
+    'Copied': 'కాపీ అయింది',
+    'Copy': 'కాపీ',
+    'Donate Now': 'ఇప్పుడే దానం చేయండి',
+    'Join Us': 'మాతో చేరండి',
+    'Volunteer': 'స్వచ్ఛంద సేవకుడు',
+    'Get in touch': 'స్ప్రందించండి',
+    'Read more': 'మరింత చదవండి',
+    'View all': 'అన్నింటినీ చూడండి'
+  };
   var LANG_KEY = 'deevena_lang';
   var originalText = new WeakMap();
   var originalPlaceholder = new WeakMap();
@@ -115,7 +140,7 @@
 
   function applyLanguage(lang){
     var toTelugu = (lang === 'te');
-    walkAndTranslate(document.body, toTelugu);
+    if(document.body) walkAndTranslate(document.body, toTelugu);
     document.documentElement.setAttribute('lang', toTelugu ? 'te' : 'en');
     document.querySelectorAll('.lang-toggle').forEach(function(b){
       b.textContent = toTelugu ? 'తె | EN' : 'EN | తె';
